@@ -240,7 +240,7 @@ def generate_surrogate(x,
 
     h = amp * tf.math.exp(-1.j * phase)
     phase = tf.cast(phase, tf.float32)
-    phase = phase[0]
+    print("I think this line is wrong")
     phase = phase - phase[0]
 
     return tf.math.real(h), tf.math.imag(h), amp, phase
